@@ -1,11 +1,24 @@
+/* NO ES UN CSS LINDO SIMPLEMENTE SON COSAS QUE CUMPLEN LOS REQUISITOS  */
+
+
+
 body{
     background-color: #4058B0
     ;
 }
+
+/* El código CSS debe contener al menos 3 selectores que hagan referencia a clases */
 .contenedor {
     overflow: auto;
 }
 
+.Cabeza {
+    font-size: xx-small;
+}
+
+.listita {
+    background-color: yellowgreen;
+}
 img{
     float: left;
     margin-right: 10px;
@@ -14,7 +27,16 @@ img{
     font-style: italic;
     font-size: 20px;
 }
-h1, h2 {
+
+/* El código CSS debe contener al menos 2 selectores que hagan referencia a elementos de la página a través de su id */
+#Contactar {
+    font-style: italic;
+}
+#Perfiles{
+    background-color: goldenrod;
+}
+
+h1{
     color: #C98221;
 }   
 a{
