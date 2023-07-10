@@ -1,0 +1,25 @@
+body{
+    background-color: #4058B0
+    ;
+}
+.contenedor {
+    overflow: auto;
+}
+
+img{
+    float: left;
+    margin-right: 10px;
+}
+.contenedor p{
+    font-style: italic;
+    font-size: 20px;
+}
+h1, h2 {
+    color: #C98221;
+}   
+a{
+    color: darkgoldenrod;
+}
+th{
+    color: peru;
+}
