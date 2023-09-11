@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Challenge</title>
+    <title>Formulario de Registro</title>
+
 </head>
+
 <body>
-   
-    <label for="">Nombre</label>
-    <input type="text" id="name">
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="">Apellido</label>
-    <input type="text" id="lastname">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="lastname" name="lastname" required>
 
-    <label for="">Fecha de Nacimiento</label>
-    <input type="text" id="fecha">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha" name="fechaNacimiento" required>
 
-    <button id="button">Enviar</button>
-
+        <button type="submit">Enviar</button>
+    </form>
     <script src="script.js"></script>
 </body>
+
 </html>

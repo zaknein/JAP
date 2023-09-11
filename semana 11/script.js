@@ -1,36 +1,23 @@
-const Name = document.getElementById("name");
-const lastName = document.getElementById("lastname");
-const fecha = document.getElementById("fecha");
-const BUTTON = document.getElementById("button");
-const URL = "https://jsonplaceholder.typicode.com/users";
-const DATA = {};
-function insertData(array){
-    array.name = Name.value;
-    array.lastname = lastName.value;
-    array.dob = fecha.value;
-}
-const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'},
-    body: JSON.stringify(DATA)
-}
-BUTTON.addEventListener("click",()=>{
-    
-    insertData(DATA);
-    
-    fetch(URL, options)
-    .then(response => {
-        if (!response == 'ok'){
-            throw new Error("Los datos han fallado al enviarse");
-        }
-        return response.json();
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const lastName = document.getElementById("lastname").value;
+    const fecha = document.getElementById("fecha").value;
+
+    let datos = {name, lastName, fecha};
+
+    fetch("https://jsonplaceholder.typicode.com/users", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datos)
     })
-    .then (data => {
-        console.log(data);
-    })
-    .catch (error => {
-        console.error('Error', error);
-    })
-})
-    
+        .then(response => response.json())
+        .then(data => console.log(data))
+
+        .catch(error => console.error("Error en la solicitud:", error));
+});
