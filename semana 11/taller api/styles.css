@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+h1{
+    color: darkgoldenrod;
+}
+p{
+    color: darkgoldenrod;
+}
+body{
+    background: #903434;
+    background: linear-gradient(90deg,#903434 30%, #282b9f 80%);
+}
+.row{
+    height: max-content;
+}
+.container{
+    display: grid;
+    place-items: center;
+}
+#header{
+    margin-top: 20%;
+    font-size: 7rem;
+    color: #023e8a;
+    z-index: 1;
+}
+#instruction{
+    margin-top: 20%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#box{
+
+    display: grid;
+}
+input[type=text]{
+    height: 2.8rem;
+    margin-top: 4%;
+    font-size: 2rem;
+}
+#nameInput{
+    background-color: cadetblue;
+}
+button{
+    height: 2.8rem;
+    border-radius: 2rem;
+    background: #2a0134;
+   
+
+}
+button:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+button p{
+    color: goldenrod;
+    font-size: 2rem;
+}
+#output{
+    color: gold;
+    display: none;
+    font-size: 2rem;
+    z-index: 1;
+}
